@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+  <title>List Hutang</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">LIST HUTANG</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+
+  <br />
+  <br />
+
+  <div style="margin-left: 5%">
+    <form action="index.php" method="POST">
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="tname">Nama</label>
+          <input type="text" class="form-control" name="tname" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="tjumlah">Jumlah</label>
+          <input class="form-control" type="number" name="tjumlah" name="tjumlah" min="0" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="tnohp">No HP</label>
+          <input class="form-control" type="text" name="tnohp" name="tnohp" min="0" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="tdeadline">Deadline</label>
+          <input class="form-control" type="date" name="tdeadline" name="tdeadline" min="0" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="tdetail">Detail</label>
+          <textarea class="form-control" name="tdetails" rows="3" required></textarea>
+        </div>
+      </div>
+
+      <button type="submit" name="add" class="btn btn-primary">Add</button>
+    </form>
+    
+    <br>
+
+    <form action="index.php" method="POST">
+      <button name="sort" type="submit" value="reset" class="btn btn-success">Reset</button>
+      <br>
+      Sort Ascending
+      <br>
+      <button name="sort" type="submit" value="nama" class="btn btn-secondary">Nama</button>
+      <button name="sort" type="submit" value="no_hp" class="btn btn-secondary">No HP</button>
+      <button name="sort" type="submit" value="jumlah" class="btn btn-secondary">Jumlah</button>
+      <button name="sort" type="submit" value="deadline" class="btn btn-secondary">Deadline</button>
+      <button name="sort" type="submit" value="status" class="btn btn-secondary">Status</button>
+    </form>
+  
+    <br>
+
+    <!-- Tabel 1 - Task -->
+    <div style="display: inline-block; ">
+      <h3>list Penghutang</h3>
+      <!-- TABEL1 -->
+      <table align="left" border="1" style="text-align: center;">
+        <tr>
+          <td>No</td>
+          <td>Nama</td>
+          <td>No HP</td>
+          <td>Jumlah</td>
+          <td>Deadline</td>
+          <td style="width: 40%;">Detail</td>
+          <td>Status</td>
+          <td>Aksi</td>
+        </tr>
+        <tr>
+          <!-- DATA YG AKAN DIGANTI -->
+          DATA_TABEL
+        </tr>
+
+      </table>
+    </div>
+
+    
+
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
